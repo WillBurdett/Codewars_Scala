@@ -1,15 +1,25 @@
 [0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/helloworld_2.13-0.1.0-SNAPSHOT.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	example[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/example[0m
-[0m[[0m[0mdebug[0m] [0m[0m	example/EvenOrOdd$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/example/EvenOrOdd$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	example/VowelCount$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/example/VowelCount$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	example/EvenOrOdd$delayedInit$body.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/example/EvenOrOdd$delayedInit$body.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	example/VowelCount.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/example/VowelCount.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	example/EvenOrOdd.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/example/EvenOrOdd.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Codewars[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/Codewars[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Codewars/EvenOrOdd$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/Codewars/EvenOrOdd$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Codewars/VowelCount$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/Codewars/VowelCount$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Codewars/EvenOrOdd$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/Codewars/EvenOrOdd$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Codewars/VowelCount.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/Codewars/VowelCount.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Codewars/VowelCount$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/Codewars/VowelCount$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Codewars/EvenOrOdd.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/Codewars/EvenOrOdd.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Workbook[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/Workbook[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Workbook/ListsAndArrays$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/Workbook/ListsAndArrays$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Workbook/ListsAndArrays.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/Workbook/ListsAndArrays.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Workbook/ListsAndArrays$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/williamburdett/IdeaProjects/HelloWorld/target/scala-2.13/classes/Workbook/ListsAndArrays$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
