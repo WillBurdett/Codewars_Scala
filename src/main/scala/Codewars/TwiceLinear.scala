@@ -5,54 +5,32 @@ import scala.collection.mutable.ListBuffer
 
 object TwiceLinear extends App{
 
-
-  // 50ms using ListBuffer
-  def dblLinear(n: Int): Int = {
-        var (times2Index, times3Index) = (0,0)
-        @tailrec
-        def step(currentList : ListBuffer[Int]): Int = {
-          val next2 = 2 * currentList(times2Index) + 1
-          val next3 = 3 * currentList(times3Index) + 1
-
-          if (currentList.length > n) {
-            currentList(n)
-          } else if (next2 <= next3) {
-            times2Index += 1
-            step((currentList :+ next2).distinct)
-          } else {
-            times3Index += 1
-            step((currentList :+ next3).distinct)
-          }
-        }
-        step(ListBuffer(1))
-      }
-
   // TAIL-RECURSION METHOD
 
-//  def dblLinear(n: Int): Int = {
-//    var (times2Index, times3Index) = (0,0)
-//    @tailrec
-//    def step(currentList : Vector[Int]): Int = {
-//
-//      val next2 = 2 * currentList(times2Index) + 1
-//      val next3 = 3 * currentList(times3Index) + 1
-//
-//      if (currentList.length > n) {
-//        currentList(n)
-//      } else if (next2 <= next3) {
-//        times2Index += 1
-//        step((currentList :+ next2).distinct)
-//      } else {
-//        times3Index += 1
-//        step((currentList :+ next3).distinct)
-//      }
-//    }
-//    step(Vector(1))
-//  }
+  def dblLinear(n: Int): Int = {
+    var (times2Index, times3Index) = (0,0)
+    @tailrec
+    def step(currentList : Vector[Int]): Int = {
+
+      val next2 = 2 * currentList(times2Index) + 1
+      val next3 = 3 * currentList(times3Index) + 1
+
+      if (currentList.length > n) {
+        currentList(n)
+      } else if (next2 <= next3) {
+        times2Index += 1
+        step((currentList :+ next2).distinct)
+      } else {
+        times3Index += 1
+        step((currentList :+ next3).distinct)
+      }
+    }
+    step(Vector(1))
+  }
 
 
 
-//  BEST SOLUTION SO FAR
+//  WHILE LOOP (51ms)
 
 //  def dblLinear(n: Int): Int = {
 //    var currentList = Vector(1)
@@ -65,10 +43,10 @@ object TwiceLinear extends App{
 //
 //      if (next2 <= next3) {
 //        times2Index += 1
-//        currentList = (currentList :+ next2).distinct
+//        if (!currentList.contains(next2)) currentList = currentList :+ next2
 //      } else {
 //        times3Index += 1
-//        currentList = (currentList :+ next3).distinct
+//        if (!currentList.contains(next3)) currentList = currentList :+ next3
 //      }
 //    }
 //    currentList(n)
