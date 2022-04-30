@@ -37,4 +37,15 @@ object FindTheSmallest extends App {
     (left ++ Vector(array(current)) ++ right).mkString("").toLong
   }
   println(smallest(256687587015L))
+
+  // highly complicated user-submitted solution!!
+
+  def smallestNum(n: Long): Array[Long] =
+    (for {
+      i <- 0 until s"$n".size
+      j <- 0 until s"$n".size
+      if i != j
+    } yield Array(s"$n".patch(j, Nil, 1).patch(i, Seq(s"$n"(j)), 0).toLong, j, i))
+      .minBy { case Array(s, i, j) => (s, i) }
+
 }
