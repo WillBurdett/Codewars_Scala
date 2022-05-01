@@ -29,15 +29,6 @@ object HumanTime extends App{
     val isMin = min != 0
     val isSecond = second != 0
 
-
-    val positiveResults: Array[Boolean] = Array(isYear, isDay, isHour, isMin, isSecond).filter(e => e)
-
-    // go through each unit if remaining positive results > 1 , appends ", "
-    // if remaining positive results == 1 , append " and "
-    // if remaining positive results == 0, append nothing
-
-    println(positiveResults.mkString(", "))
-
     if (isYear && year != 1){
       output += s"$year years"
     } else if (isYear && year == 1){
@@ -50,27 +41,21 @@ object HumanTime extends App{
       output += s"$day day"
     }
     if (!isYear && isDay && isHour && day != 1){
-      output += s"$day days ,"
+      output += s"$day days, "
     } else if (isYear && isDay && isHour && min == 1){
-      output += s"$day day ,"
+      output += s"$day day, "
     }
 
-    if (isYear && isDay && !isHour && !isMin && isDay && day != 1){
+    if (isYear && isDay && !isHour && day != 1){
       output += s" and $day days"
     } else if (isYear && isDay && isHour && min == 1){
       output += s" and $day day"
     }
 
-    if (isYear && isDay && !isHour && (isMin || isDay) && day != 1){
-      output += s", $day days"
-    } else if (isYear && isDay && isHour && min == 1){
-      output += s",  $day day"
-    }
-
     if (isYear && isDay && isHour && day != 1){
-      output += s", $day days ,"
+      output += s", $day days, "
     } else if (isYear && isDay && isHour && min == 1){
-      output += s", $day day ,"
+      output += s", $day day, "
     }
 
 
