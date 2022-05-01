@@ -40,11 +40,25 @@ object HumanTime extends App{
     if (result == "") "now" else result
   }
 
-
   println(formatDuration(239935673))
 
+  // user-submitted solution!
+  def formatDuration2(seconds: Int): String =
+    (List(("year", 31536000, 100000), ("day", 86400, 365), ("hour", 3600, 24), ("minute", 60, 60), ("second", 1, 60))
+      .map {
+        case (unit, duration, modulo) => (seconds / duration % modulo, unit)
+      }
+      .collect {
+        case (duration, unit) if duration == 1 => s"$duration $unit"
+        case (duration, unit) if duration != 0 => s"$duration ${unit}s"
+      })
+    match {
+      case Nil => "now"
+      case List(single) => single
+      case list => s"${list.init.mkString(", ")} and ${list.last}"
+    }
 
-  // ORIGINAL SOLUTION!
+  // MY ORIGINAL SOLUTION!
 
   //    if (seconds == 0) return "now"
   //
