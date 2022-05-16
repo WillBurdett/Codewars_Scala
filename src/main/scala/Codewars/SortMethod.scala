@@ -1,5 +1,8 @@
 package Codewars
 
+import scala.collection.mutable
+import scala.collection.mutable.ListBuffer
+
 // Re-write a a Sort method for Integers
 
 object SortMethod extends App {
@@ -37,9 +40,35 @@ object SortMethod extends App {
 
 
 
+  def alternateInsertionSort(arr: mutable.ListBuffer[Int]): mutable.ListBuffer[Int] = {
+
+    var index = 1 // we assume the first element is where its supposed to be, so we start by comparing the second element
+    while (index < arr.length){
+      val current = arr(index) // the element we are trying to figure out where it goes
+      var j = index - 1; // j starts on previous element
+
+
+      // if this is true we need to shift this item to the right.
+      // note: j will be -1 if the element is to be moved the beginning of the array, so we need this stopping condition
+      while( j >= 0 && arr(j) > current){
+
+        arr(j + 1) = arr(j) // copy the previous element to the right hand side
+        j -= 1; // we decrement j so each of the greater items are shifted to the right
+      }
+      // the current index we're looking at is set to the initial value we were comparing everything to
+      arr(j + 1) = current
+      index+=1
+    }
+    arr
+  }
+
+
+
 
 
   val exampleListOfInts: List[Int] = List(7, 5, 2, 10, 9, 8, 6, 3, 4, 1)
+  val exampleListBufferOfInts: mutable.ListBuffer[Int] = ListBuffer(7, 5, 2, 10, 9, 8, 6, 3, 4, 1)
 
   println(sortIntsLowToHigh(exampleListOfInts))
+  println(alternateInsertionSort(exampleListBufferOfInts))
 }
