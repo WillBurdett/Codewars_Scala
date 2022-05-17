@@ -57,9 +57,29 @@ object SortMethod extends App {
       }
       // the current index we're looking at is set to the initial value we were comparing everything to
       arr(j + 1) = current
+      println(arr)
       index+=1
     }
     arr
+  }
+
+
+  def insertionSortByMemory(inputList: ListBuffer[Int]): ListBuffer[Int] = {
+
+    var index = 1
+
+    while (index < inputList.length){
+      val current = inputList(index)
+      var j = index - 1
+
+      while (j >= 0 && current < inputList(j)){
+        inputList(j + 1) = inputList(j)
+        j -= 1
+      }
+      inputList(j + 1) = current
+      index+=1
+    }
+    inputList
   }
 
 
@@ -68,7 +88,10 @@ object SortMethod extends App {
 
   val exampleListOfInts: List[Int] = List(7, 5, 2, 10, 9, 8, 6, 3, 4, 1)
   val exampleListBufferOfInts: mutable.ListBuffer[Int] = ListBuffer(7, 5, 2, 10, 9, 8, 6, 3, 4, 1)
+  val secondExampleListBufferOfInts: mutable.ListBuffer[Int] = ListBuffer(7, 5, 2, 10, 9, 8, 6, 3, 4, 1)
 
-  println(sortIntsLowToHigh(exampleListOfInts))
+  // println(sortIntsLowToHigh(exampleListOfInts))
   println(alternateInsertionSort(exampleListBufferOfInts))
+  println("---------------")
+  println(insertionSortByMemory(secondExampleListBufferOfInts))
 }
